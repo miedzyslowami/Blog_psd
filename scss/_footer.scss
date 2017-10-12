@@ -2,21 +2,56 @@
 footer{
     background: #{$mainColor};
     ul{
+        padding:20px 0;
       li{
         float: left;
-        width: 25%;
+        width: 23.5%;
         list-style-type: none;
+        box-sizing: border-box;
+        p{
+            margin-top: 10px;
+        }
+
+        &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4){
+            margin-left: 2%;
+        }
         h4{
             text-transform: uppercase;
+            color:nth($pallete,2);
+            margin: 25px 0;
         }
+        img{
+            width: 100%;
+        }
+        .latest_tweets{
+            padding:0;
+            .tw{
+                list-style-type: url('../images/tw-icon.png');
+                clear:both;
+                width: 100%;
+                padding-left: 22px;
+                background: url(../images/tw-icon.png) no-repeat -6px -6px;
+            }
+        }
+
         .insta_photos{
+            padding:0;
             li{
+                margin:0;
                 width:32%;
                 &:nth-of-type(2),&:nth-of-type(5){
                     margin:0 2%;
                 }
             }
         }
+
+            h5{
+                padding: 0;
+                margin: 0;
+                font-size: 1rem;
+                font-weight: normal;
+            }
+
       }
       &:after{
         content:'';

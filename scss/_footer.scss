@@ -1,0 +1,27 @@
+@import 'variables';
+footer{
+    background: #{$mainColor};
+    ul{
+      li{
+        float: left;
+        width: 25%;
+        list-style-type: none;
+        h4{
+            text-transform: uppercase;
+        }
+        .insta_photos{
+            li{
+                width:32%;
+                &:nth-of-type(2),&:nth-of-type(5){
+                    margin:0 2%;
+                }
+            }
+        }
+      }
+      &:after{
+        content:'';
+        clear:both;
+        display:block;
+      }
+    }
+}

@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'header';
 @import 'sign_up';
+@import 'footer';
 
 * {
   font-family: #{$fontFamily};
@@ -17,20 +18,4 @@ p,li,h1,h2,h3,h4{
   max-width: 1200px;
   margin:0 auto;
   padding:0 2%;
-}
-
-
-
-footer{
-    background: #{$mainColor};
-    ul{
-      li{
-        float:left;
-      }
-      &:after{
-        content:'';
-        clear:both;
-        display:block;
-      }
-    }
 }

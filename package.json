@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://miedzyslowami.github.io/BodyBuilding/"
+    "url": "https://miedzyslowami.github.io/Blog_psd/"
   },
   "keywords": [],
   "author": "Malgorzata Grajewska",
@@ -27,7 +27,7 @@
     "webpack-dev-server": "^2.5.0"
   },
   "bugs": {
-    "url": "https://github.com/miedzyslowami/BodyBuilding/issues"
+    "url": "https://github.com/miedzyslowami/Blog_psd/issues"
   },
-  "homepage": "https://github.com/miedzyslowami/BodyBuilding#readme"
+  "homepage": "https://github.com/miedzyslowami/Blog_psd#readme"
 }

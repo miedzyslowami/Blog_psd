@@ -3,6 +3,9 @@
 #sign_up {
   form {
     height: 75px;
+    @media only screen and #{$smart}{
+    height:auto;
+    }
 
     h3 {
       color: nth($pallete,3);
@@ -12,6 +15,11 @@
       height: 50px;
       margin: 0;
       vertical-align: -webkit-baseline-middle;
+      @media only screen and #{$smart}{
+        display: block;
+        width:95%;
+        margin:10px auto;
+      }
     }
 
     input {
@@ -22,6 +30,11 @@
       font-family: #{$fontFamily};
       text-transform: uppercase;
       height: 50px;
+      @media only screen and #{$smart}{
+        display: block;
+        width:95%;
+        margin:10px auto;
+      }
     }
 
     input[type='submit'] {

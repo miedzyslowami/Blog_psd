@@ -29,4 +29,9 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2%;
+  @media only screen and #{$smart}{
+    width: 100%;
+    min-width:320px;
+    padding:0;
+  }
 }

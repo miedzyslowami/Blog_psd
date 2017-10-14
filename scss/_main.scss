@@ -3,12 +3,18 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  @media only screen and #{$smart}{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
   @for $i from 1 through 4 {
     .column_#{$i} {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding: 20px 0;
+
     }
 
     .blog_post {

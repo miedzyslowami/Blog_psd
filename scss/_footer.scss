@@ -3,7 +3,9 @@
 footer {
   background: #{$mainColor};
   ul {
-    padding: 20px 0;
+
+    list-style-type: none;
+    box-sizing: border-box;
     @media only screen and #{$smart}{
         padding: 20px 10px;
     }
@@ -20,10 +22,12 @@ footer {
         margin:0;
         vertical-align: top;
       }
-      float: left;
-      width: 23.5%;
-      list-style-type: none;
-      box-sizing: border-box;
+      @media only screen and #{$desktop}{
+        float: left;
+        width: 23.5%;
+        // padding: 20px 0;
+      }
+
       p {
         margin-top: 10px;
       }
@@ -46,7 +50,6 @@ footer {
       .latest_tweets {
         padding: 0;
         .tw {
-          list-style-type: url('../images/tw-icon.png');
           clear: both;
           width: 100%;
           padding-left: 22px;
@@ -56,12 +59,11 @@ footer {
       .insta_photos {
         padding: 0;
         li {
-          margin: 0;
-          width: 32%;
+
 
           &:nth-of-type(2),
           &:nth-of-type(5) {
-            margin: 0 2%;
+
             @media only screen and #{$smart}{
               display: block;
               width:100%;
@@ -71,6 +73,10 @@ footer {
               width:45%;
               display: inline-block;
               margin:2px auto;
+            }
+            @media only screen and #{$desktop}{
+              width: 32%;
+              margin: 0 2%;
             }
           }
           @media only screen and #{$smart}{
@@ -82,6 +88,10 @@ footer {
             width:45%;
             display: inline-block;
             margin:2px auto;
+          }
+          @media only screen and #{$desktop}{
+            margin: 0;
+            width: 32%;
           }
         }
       }

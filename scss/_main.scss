@@ -1,8 +1,6 @@
 #blog_posts {
   background-color: nth($pallete,4);
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
   @media only screen and #{$smart}{
   flex-direction: column;
   justify-content: center;
@@ -14,6 +12,11 @@
   justify-content: space-between;
   align-items: flex-start;
   }
+  @media only screen and #{$desktop}{
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
   @for $i from 1 through 4 {
     .column_#{$i} {
       display: flex;
@@ -23,6 +26,10 @@
       @media only screen and #{$tablet}{
       width: 50%;
       }
+      @media only screen and #{$tablet}{
+      width: 24%;
+      }
+
     }
 
     .blog_post {
@@ -32,6 +39,9 @@
       margin: 15px 5px;
       @media only screen and #{$tablet}{
         margin: 15px auto;
+      }
+      @media only screen and #{$desktop}{
+        margin: 15px 5px;
       }
       .post_type_image {
         display: block;
@@ -95,7 +105,7 @@
       .post_footer {
         font-size: 0.7rem;
         line-height: 1.7rem;
-        padding: 0 10px;
+        padding: 0 6px;
 
         img {
           width: 15px;

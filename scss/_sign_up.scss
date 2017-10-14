@@ -2,21 +2,21 @@
 
 #sign_up {
   form {
-    height: 75px;
     @media only screen and #{$smart}{
     height:auto;
     }
     @media only screen and #{$tablet}{
       height:135px;
     }
+    @media only screen and #{$desktop}{
+      height: 75px;
+    }
 
     h3 {
       color: nth($pallete,3);
       text-transform: uppercase;
-      width: 15%;
       display: inline-block;
       height: 50px;
-      margin: 0;
       vertical-align: -webkit-baseline-middle;
       @media only screen and #{$smart}{
         display: block;
@@ -26,11 +26,13 @@
       @media only screen and #{$tablet}{
         width:100%;
       }
+      @media only screen and #{$desktop}{
+          width: 15%;
+            margin: 0;
+      }
     }
 
     input {
-      width: 25%;
-      margin-left: 32px;
       box-sizing: border-box;
       padding: 10px;
       font-family: #{$fontFamily};
@@ -44,6 +46,10 @@
       @media only screen and #{$tablet}{
         width:$oneThird;
         margin:8px auto;
+      }
+      @media only screen and #{$desktop}{
+        width: 25%;
+        margin-left: 28px;
       }
     }
 

@@ -7,16 +7,26 @@
 * {
   font-family: #{$fontFamily};
 }
-body,ul,li{
-  margin:0;
-  padding:0;
+
+body,
+li,
+ul {
+  margin: 0;
+  padding: 0;
 }
-p,li,h1,h2,h3,h4{
+
+h1,
+h2,
+h3,
+h4,
+li,
+p {
   color: nth($pallete,1);
 }
-.wrapper{
-  width:96%;
+
+.wrapper {
+  width: 96%;
   max-width: 1200px;
-  margin:0 auto;
-  padding:0 2%;
+  margin: 0 auto;
+  padding: 0 2%;
 }

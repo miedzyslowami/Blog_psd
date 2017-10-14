@@ -25,11 +25,16 @@ header {
     @media only screen and #{$smart}{
       height: 50px;
     }
+    @media only screen and #{$tablet}{
+      height: 60px;
+    }
 
     #burger {
       width: 32%;
       display: inline-block;
-
+      @media only screen and #{$tablet}{
+          display: none;
+      }
       img {
         margin-bottom: 18px;
         margin-left: 10px;
@@ -62,11 +67,16 @@ header {
 
     ul {
       width: 32%;
-      display: inline-block;
       height: 60px;
       line-height: 60px;
+      display: inline-block;
       @media only screen and #{$smart}{
         display:none;
+      }
+      @media only screen and #{$tablet}{
+          display: inline-block;
+          width:50%;
+          float: right;
       }
       li {
         float: right;
@@ -90,6 +100,13 @@ header {
         clear: both;
         content: '';
         display: block;
+      }
+    }
+    &:after{
+      @media only screen and #{$tablet}{
+          content: '';
+          clear:both;
+          display: block;
       }
     }
   }

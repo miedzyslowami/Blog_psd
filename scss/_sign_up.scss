@@ -6,6 +6,9 @@
     @media only screen and #{$smart}{
     height:auto;
     }
+    @media only screen and #{$tablet}{
+      height:135px;
+    }
 
     h3 {
       color: nth($pallete,3);
@@ -19,6 +22,9 @@
         display: block;
         width:95%;
         margin:10px auto;
+      }
+      @media only screen and #{$tablet}{
+        width:100%;
       }
     }
 
@@ -35,13 +41,18 @@
         width:95%;
         margin:10px auto;
       }
+      @media only screen and #{$tablet}{
+        width:$oneThird;
+        margin:8px auto;
+      }
     }
 
     input[type='submit'] {
       background-color: black;
       color: white;
-      border: 1px solid black;
+      border: 2px solid black;
       font-weight: 800;
+      box-sizing: border-box;
     }
   }
 }

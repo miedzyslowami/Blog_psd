@@ -10,8 +10,15 @@ footer {
     li {
       @media only screen and #{$smart}{
         clear:both;
-        dispay:block;
+        display:block;
         width:100%;
+      }
+      @media only screen and #{$tablet}{
+        float:none;
+        display:inline-block;
+        width:45%;
+        margin:0;
+        vertical-align: top;
       }
       float: left;
       width: 23.5%;
@@ -60,11 +67,21 @@ footer {
               width:100%;
               margin:10px auto;
             }
+            @media only screen and #{$tablet}{
+              width:45%;
+              display: inline-block;
+              margin:2px auto;
+            }
           }
           @media only screen and #{$smart}{
             display: block;
             width:100%;
             margin:10px auto;
+          }
+          @media only screen and #{$tablet}{
+            width:45%;
+            display: inline-block;
+            margin:2px auto;
           }
         }
       }

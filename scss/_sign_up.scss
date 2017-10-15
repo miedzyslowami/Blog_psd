@@ -40,12 +40,12 @@
       height: 50px;
       @media only screen and #{$smart}{
         display: block;
-        width:95%;
-        margin:10px auto;
+        width:90%;
+        margin:15px auto;
       }
       @media only screen and #{$tablet}{
         width:$oneThird;
-        margin:8px auto;
+        margin: 15px auto;
       }
       @media only screen and #{$desktop}{
         width: 25%;

@@ -49,10 +49,12 @@ header {
         width: 60%;
       }
 
-
       img {
         margin: 0 auto;
         display: block;
+        @media only screen and #{$desktop}{
+        margin: 0;
+        }
       }
     }
 
@@ -112,8 +114,63 @@ header {
   }
 
   #main_banner {
+    position: relative;
     img {
       width: 100%;
+      position: relative;
     }
+    h2,h3{
+      color:nth($pallete,3);
+      position: absolute;
+      // text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+      text-transform:uppercase;
+    }
+    h2{
+      top:20px;
+      left:10px;
+      font-size: 1rem;
+      @media only screen and #{$tablet}{
+        left:50px;
+        top:90px;
+      }
+      @media only screen and #{$desktop}{
+        top:200px;
+        font-size: 2rem;
+        left: 100px;
+      }
+    }
+    h3{
+      top:50px;
+      left:10px;
+      font-size: 0.7rem;
+      @media only screen and #{$tablet}{
+        left:50px;
+        top:65px;
+      }
+      @media only screen and #{$desktop}{
+        top:250px;
+        font-size: 1.5rem;
+        left: 100px;
+      }
+    }
+    #slide_indicator_container{
+      position: absolute;
+      color: white;
+      top: 30px;
+      right: 10px;
+      font-size: 1rem;
+
+      @media only screen and #{$tablet}{
+        font-size: 2rem;
+        right: 50px;
+        top:60px;
+      }
+      @media only screen and #{$desktop}{
+        font-size: 2rem;
+        right: 60px;
+      }
+    }
+
+
   }
 }

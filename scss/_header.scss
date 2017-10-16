@@ -115,9 +115,17 @@ header {
 
   #main_banner {
     position: relative;
+    background: white;
+    overflow: hidden;
     img {
       width: 100%;
       position: relative;
+      opacity:1;
+      background-color: white;
+      transition: opacity 1.5s ease-in-out;
+    }
+    .fadeOut{
+      opacity:0;
     }
     h2,h3{
       color:nth($pallete,3);

@@ -37,6 +37,9 @@
       max-width: 265px;
       box-sizing: border-box;
       margin: 15px 5px;
+      &:hover{
+        box-shadow: 0 0 19px 0px black;
+      }
       @media only screen and #{$tablet}{
         margin: 15px auto;
       }

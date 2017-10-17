@@ -1,7 +1,7 @@
 @import '_variables';
 
 header {
-  padding: 20px 0;
+  padding: 0 0 20px;
   //gradient start
   background: #{$mainColor};
   /* Old Browsers */
@@ -35,9 +35,16 @@ header {
       @media only screen and #{$tablet}{
           display: none;
       }
-      img {
-        margin-bottom: 18px;
-        margin-left: 10px;
+        img {
+          width: 25px;
+          height: 25px;
+          margin: 10px;
+          box-sizing: border-box;
+          transition: all #{$showMenuTimer} cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transform: rotate(0deg);
+      }
+      .rotate_star{
+        transform: rotate(540deg);
       }
     }
 
@@ -72,9 +79,18 @@ header {
       height: 60px;
       line-height: 60px;
       display: inline-block;
+
       @media only screen and #{$smart}{
-        display:none;
+        position: fixed;
+        left: -100%;
+        top:40px;
+        z-index: 99999;
+        background-color: #{$mainColor};
+        height: 100vh;
+        width: 100vw;
+        transition: left #{$showMenuTimer} cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
+
       @media only screen and #{$tablet}{
           display: inline-block;
           width:50%;
@@ -84,7 +100,14 @@ header {
         float: right;
         list-style-type: none;
         margin-left: 22px;
-
+        @media only screen and #{$smart}{
+          display: block;
+          float: none;
+          width: 50%;
+          margin: 0 auto;
+          text-align: center;
+          border-bottom:1px solid nth($pallete,2);
+        }
         a {
           text-decoration: none;
           color: nth($pallete,2);
@@ -104,6 +127,9 @@ header {
         display: block;
       }
     }
+    .show_menu{
+      left:0;
+    }
     &:after{
       @media only screen and #{$tablet}{
           content: '';
@@ -112,16 +138,23 @@ header {
       }
     }
   }
-
+.fixed_nav{
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    background: #{$mainColor};
+    height: 100vh;
+    width: 100vw;
+}
   #main_banner {
     position: relative;
-    background: white;
+    background: nth($pallete,2);
     overflow: hidden;
     img {
       width: 100%;
       position: relative;
+      background-color: nth($pallete,2);
       opacity:1;
-      background-color: white;
       transition: opacity 1.5s ease-in-out;
     }
     .fadeOut{
@@ -130,8 +163,9 @@ header {
     h2,h3{
       color:nth($pallete,3);
       position: absolute;
-      // text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
       text-transform:uppercase;
+      opacity:1;
+      transition: opacity 1.5s ease-in-out;
     }
     h2{
       top:20px;
@@ -163,7 +197,7 @@ header {
     }
     #slide_indicator_container{
       position: absolute;
-      color: white;
+      color: nth($pallete,2);
       top: 30px;
       right: 10px;
       font-size: 1rem;

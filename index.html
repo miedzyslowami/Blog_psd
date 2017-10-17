@@ -20,18 +20,18 @@
     <div class='wrapper header'>
       <nav>
         <div id='burger' >
-        <img src='./images/burger.svg' alt='menu_button' />
-    </div>
-    <h1>Decoblog</h1>
-    <div id='logo' />
-    <img src='./images/logo.jpg' akl='logo' />
-    </div>
-    <ul>
-      <li id="rss_feed"><a href=''>Rss</a></li>
-      <li id="twitter_feed"><a href=''>Twitter</a></li>
-      <li id="facebook_feed"><a href=''>Facebook</a></li>
-      <li id="search_feed"><a href=''>Search</a></li>
-    </ul>
+          <img src='./images/burger.svg' alt='menu_button' />
+        </div>
+          <h1>Decoblog</h1>
+          <div id='logo' />
+          <img src='./images/logo.jpg' akl='logo' />
+          </div>
+          <ul>
+            <li id="rss_feed"><a href=''>Rss</a></li>
+            <li id="twitter_feed"><a href=''>Twitter</a></li>
+            <li id="facebook_feed"><a href=''>Facebook</a></li>
+            <li id="search_feed"><a href=''>Search</a></li>
+          </ul>
     </nav>
     <div id='main_banner'>
       <img src='./images/banner_0.jpg' alt='banner' />
@@ -55,9 +55,16 @@
       <form id='form'>
         <h3>Signup to newsletter</h3>
         <input id='name' type='text' placeholder='Your name' />
+        <div id='name_validation_warning'>
+          Name should have at least 5 characters.
+        </div>
         <input id='email' type='email' placeholder='Your e-mail' />
+        <div id='email_validation_warning'>
+          Email should have at least 5 characters and '@'.
+        </div>
         <input id='submit' type='submit' value='subscribe now' />
       </form>
+
     </section>
     <section id='blog_posts' class='wrapper'>
       <!--Column 1-->
@@ -316,6 +323,7 @@
       </p>
     </div>
   </footer>
+  <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
   <script src='js/out.js'></script>
 </body>
 
